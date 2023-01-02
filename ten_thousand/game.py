@@ -33,8 +33,7 @@ def play_dice():
     dice_left = 6
 
     print(f"Starting round 1")
-    print(f"Rolling {6 - len(current_dice)} dice...")
-
+    print("(r)oll, (b)ank your points, or (q)uit: ")
     while True:
 
         choice = input("> ")
@@ -57,13 +56,16 @@ def play_dice():
             print(f"Starting round {round_number}")
             print(f"Rolling {6 - len(current_dice)} dice...")
             print(f"*** {dice_roll} ***")
-            keepers = input("Enter dice to keep, or (q)uit:")
+            keepers = input("Enter dice to keep, or (q)uit: ")
+
+            if len(keepers) > dice_left:
+                print("Cheater!!! Or possibly made a typo...")
 
             if GameLogic.validate_keepers(dice_roll, keepers):
-                turn_score = 0
                 current_dice.extend(keepers)
                 dice_left -= len(keepers)
-
+                if dice_left > 0:
+                    print(f"You have {turn_score} unbanked points and {dice_left} dice remaining. (r)oll, (b)ank your points, or (q)uit: ")
         if roll_score == 0:
             turn_score = 0
             print("Farkled!!")
@@ -71,12 +73,14 @@ def play_dice():
             turn_score += roll_score
             print(f"You have {turn_score} unbanked points and {dice_left} dice remaining.")
             print(f"(r)oll, (b)ank your points, or (q)uit: ")
-
         if choice == "b":
             print(f"You banked {turn_score} points in round {round_number}")
             total_score += turn_score
             print(f"Total score is {total_score} points")
             turn_score = 0
+        if dice_left == 0:
+            dice_left = 6
+            current_dice = []
 
 
 if __name__ == "__main__":
