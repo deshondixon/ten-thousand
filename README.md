@@ -22,7 +22,3 @@
 ## Tests
 
 - Use *pytest-watch* to test program.
-
-
-
-
