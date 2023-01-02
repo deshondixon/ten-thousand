@@ -50,4 +50,11 @@ class GameLogic:
     def roll_dice(num_dice):
         return tuple(randint(1, 6) for _ in range(0, num_dice))
 
-
+    @staticmethod
+    def validate_keepers(dice_roll, dice_kept):
+        dice_roll_counts = Counter(dice_roll)
+        dice_kept_counts = Counter(dice_kept)
+        for value, count in dice_kept_counts.items():
+            if value not in dice_roll_counts or dice_roll_counts[value] < count:
+                return False
+        return True

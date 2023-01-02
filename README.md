@@ -1,4 +1,4 @@
-# LAB 6 - Class 401d20
+# LAB 6 - 8 - Class 401d20
 
 ## ten-thousand
 
@@ -22,3 +22,6 @@
 ## Tests
 
 - Use *pytest-watch* to test program.
+
+### References
+Utilized google, stackoverflow, and referenced classmates Jason Christopher and Oliver Spier code.

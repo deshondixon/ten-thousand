@@ -57,7 +57,12 @@ def play_dice():
             print(f"Starting round {round_number}")
             print(f"Rolling {6 - len(current_dice)} dice...")
             print(f"*** {dice_roll} ***")
-#           print("Enter dice to keep, or (q)uit:")
+            keepers = input("Enter dice to keep, or (q)uit:")
+
+            if GameLogic.validate_keepers(dice_roll, keepers):
+                turn_score = 0
+                current_dice.extend(keepers)
+                dice_left -= len(keepers)
 
         if roll_score == 0:
             turn_score = 0
@@ -72,7 +77,6 @@ def play_dice():
             total_score += turn_score
             print(f"Total score is {total_score} points")
             turn_score = 0
-            print(f"Starting round {round_number}")
 
 
 if __name__ == "__main__":
