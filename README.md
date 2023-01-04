@@ -24,4 +24,4 @@
 - Use *pytest-watch* to test program.
 
 ### References
-Utilized google, stackoverflow, and referenced classmates Jason Christopher and Oliver Spier code.
+Utilized google, stackoverflow, and referenced JB's code from class example and classmates Jason Christopher, Oliver Spier code.
