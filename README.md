@@ -1,27 +1,28 @@
-# LAB 6 - 8 - Class 401d20
+# LAB 43 - Class 401d20
 
 ## ten-thousand
 
-#### *Author:* DeShon Dixon
+#### _Author:_ DeShon Dixon
 
 ---
 
 ## Setup
 
 - Create repo on desktop
-- Create virtual environment: 
-*python3.11 -m venv .venv*
-- Activate environment: 
-*source .venv/bin/activate*
-- Install pywatch: 
-*pip install pytest-watch*
+- Create virtual environment:
+  _python3.11 -m venv .venv_
+- Activate environment:
+  _source .venv/bin/activate_
+- Install pywatch:
+  _pip install pytest-watch_
 - Clone repo: *https://github.com/deshondixon/ten-thousand.git*
 
 ---
 
 ## Tests
 
-- Use *pytest-watch* to test program.
+- Use _pytest-watch_ to test program.
 
 ### References
+
 Utilized google, stackoverflow, and referenced JB's code from class example and classmates Jason Christopher, Oliver Spier code.

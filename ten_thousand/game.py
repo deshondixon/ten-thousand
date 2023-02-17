@@ -103,7 +103,7 @@ def complete_round(round_num, total_score, round_score):
     print(f"Total score is {total_score} points")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     play_dice()
 
 
