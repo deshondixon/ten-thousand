@@ -4,6 +4,7 @@ Source: https://github.com/github/gitignore/blob/master/Python.gitignore
 ENV/
 .vscode
 .idea
+.venv
 .DS_Store
 .history
 

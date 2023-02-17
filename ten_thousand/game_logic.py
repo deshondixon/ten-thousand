@@ -3,7 +3,6 @@ from collections import Counter
 
 
 class GameLogic:
-
     def calculate_score(roll):
         score = 0
         dice_count = Counter(roll).most_common()
